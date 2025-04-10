@@ -49,4 +49,17 @@ public class DinamicEnemy_3 : MonoBehaviour
             
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Боковое столкновение!  Отнимаем жизнь у игрока.
+            hero player = collision.gameObject.GetComponent<hero>();
+
+            if (player != null)
+            {
+                player.LoseLife();
+            }
+        }
+    }
 }

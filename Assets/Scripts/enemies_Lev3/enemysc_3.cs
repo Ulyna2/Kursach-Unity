@@ -10,14 +10,28 @@ public class enemysc_3 : MonoBehaviour
     /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
-        if (levelManager != null)
+        if (collision.gameObject.CompareTag("Player"))
         {
+            Destroy(gameObject);
             levelManager.EnemyKilled();
         }
+        
 
 
     }*/
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Боковое столкновение!  Отнимаем жизнь у игрока.
+            hero player = collision.gameObject.GetComponent<hero>();
+
+            if (player != null)
+            {
+                player.LoseLife();
+            }
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,7 +39,9 @@ public class enemysc_3 : MonoBehaviour
         {
             Destroy(gameObject);
             levelManager.EnemyKilled();
-            
+
+
         }
     }
+
 }

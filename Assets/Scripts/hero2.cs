@@ -108,13 +108,16 @@ public class hero : MonoBehaviour
         // Применяем ограниченную позицию (по X оставляем без изменений)
         transform.position = clampedPosition;
     }
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
             LoseLife();
         }
-    }
+       
+
+    }*/
     // Функция для уменьшения жизней
     public void LoseLife()
     {

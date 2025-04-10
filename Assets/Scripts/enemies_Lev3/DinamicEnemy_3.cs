@@ -33,7 +33,7 @@ public class DinamicEnemy_3 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             //SceneManager.LoadScene(3);
         }
@@ -41,10 +41,13 @@ public class DinamicEnemy_3 : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
-            levelManager.EnemyKilled();
+            if (levelManager != null)
+            {
+                levelManager.EnemyKilled();
+            }
         }
     }
 }

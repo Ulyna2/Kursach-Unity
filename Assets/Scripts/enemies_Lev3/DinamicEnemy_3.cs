@@ -30,24 +30,23 @@ public class DinamicEnemy_3 : MonoBehaviour
             transform.position = new Vector3(targetX, transform.position.y, transform.position.z);
         }
     }
-
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //SceneManager.LoadScene(3);
+             //SceneManager.LoadScene(3);
         }
-    }
+    }*/
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
-            if (levelManager != null)
-            {
-                levelManager.EnemyKilled();
-            }
+            
+            levelManager.EnemyKilled();
+            
         }
     }
 }

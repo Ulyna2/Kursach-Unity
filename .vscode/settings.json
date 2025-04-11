@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "PlatfGame1.sln"
+    "dotnet.defaultSolution": "Kursach-Unity.sln"
 }

@@ -10,13 +10,14 @@ public class Level1 : MonoBehaviour
  
     void OnTriggerEnter2D(Collider2D other) 
     { 
-        if (other.gameObject == finishPoint.gameObject && levelManager.AllEnemiesKilled()) 
+        if (other.gameObject == finishPoint.gameObject) 
         { 
-            SceneManager.LoadScene(2); 
+           if(levelManager.keyCollected && levelManager.AllEnemiesKilled())
+                SceneManager.LoadScene(2); 
         } 
         else 
         { 
-            Debug.Log("Не все враги убиты, или вы не достигли финальной точки!"); 
+            Debug.Log("Не все враги убиты или не собран ключ, или вы не достигли финальной точки!"); 
         } 
     } 
 }

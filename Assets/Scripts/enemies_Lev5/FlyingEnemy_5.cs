@@ -1,40 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class FlyingEnemy_5 : MonoBehaviour
 {
-    public LevelManager levelManager;
-    public float speed;
+    public float speed = 2f;
     private Transform player;
 
-    void Start()
+    private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    void Update()
+    private void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
+        if (player != null)
         {
-            SceneManager.LoadScene(5);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
-            Destroy(gameObject);
-            levelManager.EnemyKilled();
+            hero playerScript = collision.GetComponent<hero>();
+            if (playerScript != null)
+            {
+                playerScript.LoseLife();
+            }
         }
     }
-    
 }

@@ -6,25 +6,31 @@ using UnityEngine.SceneManagement;
 public class Boss : MonoBehaviour
 {
     public float speed = 0.03f;
-    public Vector3[] positions;
-    private int currentTarget;
+    
+    public float startX;
+    public float endX;
+    private bool movingToEnd = true;
 
     public int hitsToKill = 10;
     private int currentHits = 0;
 
+    public void Start()
+    {
+        transform.position = new Vector3(startX, transform.position.y, transform.position.z);
+    }
+
     public void FixedUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, positions[currentTarget], speed);
-        if (transform.position == positions[currentTarget])
+        float targetX = movingToEnd ? endX : startX;
+        Vector3 targetPosition = new Vector3(targetX, transform.position.y, transform.position.z);
+
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed);
+
+        if (Mathf.Abs(transform.position.x - targetPosition.x) < 0.01f)
         {
-            if (currentTarget < positions.Length - 1)
-            {
-                currentTarget++;
-            }
-            else
-            {
-                currentTarget = 0;
-            }
+            movingToEnd = !movingToEnd;
+
+            transform.position = new Vector3(targetX, transform.position.y, transform.position.z);
         }
     }
 

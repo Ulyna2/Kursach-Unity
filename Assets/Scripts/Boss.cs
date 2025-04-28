@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Boss : MonoBehaviour
 
     public int hitsToKill = 10;
     private int currentHits = 0;
+
+    public Image healthBarFill;
 
     public void Start()
     {
@@ -45,6 +48,7 @@ public class Boss : MonoBehaviour
                 // Игрок сверху напрыгнул на босса
                 currentHits++;
                 Debug.Log("Босс получил удар! Ударов: " + currentHits);
+                UpdateHealthBar();
 
                 if (currentHits >= hitsToKill)
                 {
@@ -61,7 +65,7 @@ public class Boss : MonoBehaviour
             else
             {
                 // Игрок врезался сбоку — перезагружаем сцену
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadScene(1);
             }
         }
     }
@@ -73,5 +77,12 @@ public class Boss : MonoBehaviour
 
         // Загружаем следующий уровень
         SceneManager.LoadScene(3); // Убедись, что Level2 = индекс 3
+    }
+    void UpdateHealthBar()
+    {
+        if (healthBarFill != null)
+        {
+            healthBarFill.fillAmount = 1f - (float)currentHits / hitsToKill;
+        }
     }
 }

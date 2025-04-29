@@ -13,11 +13,18 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalInput;
     private bool isFalling = false;
 
+    private Vector3 initialPosition;
+    public int maxLives = 5;
+    public int currentLives;
+    public Image lifeCounterImage; // Отображает спрайт в формате "x/5"
+    public Sprite[] lifeCounterSprites;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        UpdateLivesUI();
     }
 
     private void Update()
@@ -66,11 +73,35 @@ public class PlayerMovement : MonoBehaviour
         if (transform.position.y < fallThreshold && !isFalling)
         {
             isFalling = true;
-            RestartLevel();
+            // RestartLevel();
+            LoseLife();
         }
         else if (transform.position.y < fallThreshold)
         {
             isFalling = false;
+        }
+    }
+
+    public void LoseLife()
+    {
+        currentLives--;
+        UpdateLivesUI();
+
+        if (currentLives <= 0)
+        {
+            RestartLevel();
+        }
+        else
+        {
+            transform.position = initialPosition;
+            isFalling = false;
+        }
+    }
+    void UpdateLivesUI()
+    {
+        if (currentLives >= 0 && currentLives <= maxLives)
+        {
+            lifeCounterImage.sprite = lifeCounterSprites[currentLives];
         }
     }
 }

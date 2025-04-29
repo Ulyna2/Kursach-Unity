@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, speed + 3);
+        body.velocity = new Vector2(body.velocity.x, speed + 5);
     }
 
     private bool isGrounded()

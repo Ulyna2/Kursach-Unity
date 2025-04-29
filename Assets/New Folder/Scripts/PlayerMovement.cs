@@ -22,22 +22,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        // if (body.velocity.x > 0.1f)
-        // {
-        //     spriteRenderer.flipX = false;
-        // }
-        // else if (body.velocity.x < -0.1f)
-        // {
-        //     spriteRenderer.flipX = true;
-        // }
         horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
         if (horizontalInput > 0.01f)
-            spriteRenderer.flipX = false;
+            transform.localScale = new Vector3((float)0.08, (float)0.08, (float)0.08);
         else if (horizontalInput < -0.01f)
-            spriteRenderer.flipX = true;
-      
+            transform.localScale = new Vector3((float)-0.08, (float)0.08, (float)0.08);
+        
 
         if (Input.GetButtonDown("Jump") && isGrounded())
             Jump();
@@ -50,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, speed + 4);
+        body.velocity = new Vector2(body.velocity.x, speed + 3);
     }
 
     private bool isGrounded()

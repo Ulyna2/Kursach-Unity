@@ -11,8 +11,7 @@ public class PlayerAttac : MonoBehaviour
 
 
     private Animator anim;
-    private
-    PlayerMovement playerMovement;
+    private PlayerMovement playerMovement;
     private float cooldownTimer = Mathf.Infinity;
 
     private void Awake()
@@ -40,7 +39,7 @@ public class PlayerAttac : MonoBehaviour
 
     private int FindLightball()
     {
-        for (int i = 0; i < lightballs. Length; i++)
+        for (int i = 0; i < lightballs.Length; i++)
         {
             if (!lightballs[i].activeInHierarchy)
                 return i;

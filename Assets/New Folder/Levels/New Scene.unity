@@ -154,12 +154,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad519884b6c424e9c9b0733f27f48bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightballPrefab: {fileID: 1342073594}
-  shootPoint: {fileID: 1347509536}
-  shootingInterval: 0.5
+  attackCooldown: 0.5
+  lightPoint: {fileID: 1347509536}
+  lightballs:
+  - {fileID: 1034572527}
+  - {fileID: 507626742}
+  - {fileID: 415560163}
+  - {fileID: 877317527}
+  - {fileID: 572534044}
+  - {fileID: 1907287464}
+  - {fileID: 631316597}
+  - {fileID: 1677635655}
+  - {fileID: 2030390042}
+  - {fileID: 877396723}
   detectionRadius: 10
   health: 3
-  projectileSpeed: 5
 --- !u!61 &71466061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7187,7 +7196,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0046b59463451475c93d78e6a32e742c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7195,7 +7204,7 @@ SpriteRenderer:
   m_Size: {x: 20.48, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1347509535
@@ -7223,7 +7232,7 @@ Transform:
   m_GameObject: {fileID: 1347509535}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.9, y: -0.7, z: 0}
+  m_LocalPosition: {x: 9.51, y: -0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10168,7 +10177,7 @@ SceneRoots:
   - {fileID: 1479791961}
   - {fileID: 436570985}
   - {fileID: 345440057}
-  - {fileID: 794789542}
-  - {fileID: 580282217}
   - {fileID: 92526603}
   - {fileID: 71466064}
+  - {fileID: 580282217}
+  - {fileID: 794789542}

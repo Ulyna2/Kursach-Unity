@@ -168,7 +168,7 @@ MonoBehaviour:
   - {fileID: 2030390042}
   - {fileID: 877396723}
   detectionRadius: 10
-  health: 3
+  maxHealth: 3
 --- !u!61 &71466061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9990,6 +9990,10 @@ MonoBehaviour:
   - {fileID: 1677635655}
   - {fileID: 2030390042}
   - {fileID: 877396723}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  attackRadius: 3
 --- !u!1 &2141984385
 GameObject:
   m_ObjectHideFlags: 0

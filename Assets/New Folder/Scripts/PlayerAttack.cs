@@ -7,7 +7,9 @@ public class PlayerAttac : MonoBehaviour
 {
     [SerializeField] private float attackCooldown;   
     [SerializeField] private Transform lightPoint;
-    [SerializeField] private GameObject[] lightballs;   
+    [SerializeField] private GameObject[] lightballs;
+    [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private float attackRadius;
 
 
     private Animator anim;
@@ -35,6 +37,16 @@ public class PlayerAttac : MonoBehaviour
 
         lightballs[FindLightball()].transform.position = lightPoint.position;
         lightballs[FindLightball()].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(lightPoint.position, attackRadius, enemyLayer);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            IDamageable damageable = enemy.GetComponent<IDamageable>();
+            if (damageable != null)
+            {
+                damageable.TakeDamage();
+            }
+        }
     }
 
     private int FindLightball()

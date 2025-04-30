@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     public Image lifeCounterImage; // Отображает спрайт в формате "x/5"
     public Sprite[] lifeCounterSprites;
 
+    public bool hasKey = false;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();

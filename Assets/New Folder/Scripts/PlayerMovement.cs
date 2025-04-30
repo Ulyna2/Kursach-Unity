@@ -97,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
             isFalling = false;
         }
     }
+
     void UpdateLivesUI()
     {
         if (currentLives >= 0 && currentLives <= maxLives)

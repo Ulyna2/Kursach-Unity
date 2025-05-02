@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/New Folder/Levels/level1.unity
     guid: 4b3e5c7daf03744d39a3677de839fca8
   - enabled: 1
+    path: Assets/New Folder/Levels/Boss1.unity
+    guid: e9076d0573732724ba6295e427e5b609
+  - enabled: 1
     path: Assets/New Folder/Levels/level2.unity
     guid: ba734ae61a987b94c93662e04edef32e
   m_configObjects: {}

@@ -12,13 +12,28 @@ public class LevelExit : MonoBehaviour
             PlayerMovement player = other.GetComponent<PlayerMovement>();
             if (player != null && player.hasKey)
             {
-                Debug.Log("Переход на следующий уровень");
-                SceneManager.LoadScene(nextLevelName);
+                
+                if (AreAllEnemiesDefeated())
+                {
+                    Debug.Log("Переход на следующий уровень");
+                    SceneManager.LoadScene(nextLevelName);
+                }
+                else
+                {
+                    Debug.Log("Сначала убей всех врагов!");
+                }
             }
             else
             {
                 Debug.Log("Нужен ключ для перехода!");
             }
         }
+    }
+
+    private bool AreAllEnemiesDefeated()
+    {
+        
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        return enemies.Length == 0;
     }
 }

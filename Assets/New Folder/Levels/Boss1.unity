@@ -7157,7 +7157,7 @@ GameObject:
   - component: {fileID: 1446046075}
   - component: {fileID: 1446046076}
   - component: {fileID: 1446046078}
-  - component: {fileID: 1446046077}
+  - component: {fileID: 1446046079}
   m_Layer: 0
   m_Name: finish
   m_TagString: Untagged
@@ -7232,19 +7232,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1446046077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1446046074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ffe18fb4e9cf943b0973ae918125eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextLevelName: level2
 --- !u!61 &1446046078
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7290,6 +7277,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.688761, y: 19.509813}
   m_EdgeRadius: 0
+--- !u!114 &1446046079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446046074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc979fcb5383bc488de977e87a5ace0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLevelName: level2
+  previousSceneName: level1
 --- !u!1 &1479791960
 GameObject:
   m_ObjectHideFlags: 0
@@ -9110,8 +9111,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   fallThreshold: -10
-  maxLives: 5
-  currentLives: 5
+  maxLives: 1
+  currentLives: 1
   lifeCounterImage: {fileID: 1334054734}
   lifeCounterSprites:
   - {fileID: 21300000, guid: b797e16e6146e46a2a6ff33617357bf9, type: 3}

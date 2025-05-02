@@ -6,33 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Menu.unity
+    path: Assets/old/old scenes/Menu.unity
     guid: de28080e4bcd44f2faf37bcf57aedc7a
   - enabled: 0
-    path: Assets/Scenes/Level_1.unity
+    path: Assets/old/old scenes/Level_1.unity
     guid: 7cbb4f4385b704ec798764381fb1cf56
   - enabled: 0
-    path: Assets/Scenes/Level_2.unity
+    path: Assets/old/old scenes/Level_2.unity
     guid: e47c4e20e0b9e4828be3fc1f224b41a9
   - enabled: 0
-    path: Assets/Scenes/Level_1.unity
+    path: Assets/old/old scenes/Level_1.unity
     guid: 7cbb4f4385b704ec798764381fb1cf56
   - enabled: 0
-    path: Assets/Scenes/Boss.unity
+    path: Assets/old/old scenes/Boss.unity
     guid: 2a79af7c3734fac43b390cb293ba916c
   - enabled: 0
-    path: Assets/Scenes/Level_2.unity
+    path: Assets/old/old scenes/Level_2.unity
     guid: e47c4e20e0b9e4828be3fc1f224b41a9
   - enabled: 0
-    path: Assets/Scenes/Level_3.unity
+    path: Assets/old/old scenes/Level_3.unity
     guid: 4b6c4c245b66b44c2bf79eec29e25ad9
   - enabled: 1
-    path: Assets/New Folder/Levels/level1.unity
+    path: Assets/Game/Scenes/level1.unity
     guid: 4b3e5c7daf03744d39a3677de839fca8
   - enabled: 1
-    path: Assets/New Folder/Levels/Boss1.unity
+    path: Assets/Game/Scenes/Boss1.unity
     guid: e9076d0573732724ba6295e427e5b609
   - enabled: 1
-    path: Assets/New Folder/Levels/level2.unity
+    path: Assets/Game/Scenes/level2.unity
     guid: ba734ae61a987b94c93662e04edef32e
   m_configObjects: {}

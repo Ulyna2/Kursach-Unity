@@ -28,7 +28,7 @@ public class LevelExitBoss : MonoBehaviour
         {
             if (IsBossDefeated())
             {
-                Debug.Log("Босс побежден. Переход к сцене победы.");
+                Debug.Log("Босс побежден. Переход к следующему уровню.");
                 SceneManager.LoadScene(nextLevelName);
             }
             else

@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     private BoxCollider2D boxCollider;
     private Animator anim;
     private float lifetime;
-    
+
 
     private void Awake()
     {
@@ -43,11 +43,11 @@ public class Projectile : MonoBehaviour
 
     }
 
-    public void SetDirection (float _direction)
+    public void SetDirection(float _direction)
     {
         lifetime = 0;
         direction = _direction;
-        gameObject.SetActive (true);
+        gameObject.SetActive(true);
         hit = false;
         boxCollider.enabled = true;
 

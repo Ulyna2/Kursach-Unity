@@ -275,7 +275,7 @@ Transform:
   m_GameObject: {fileID: 71466059}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.71, y: 0.87, z: 0.06346237}
+  m_LocalPosition: {x: 9.71, y: 3.89, z: 0.06346237}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -292,16 +292,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 71466059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1803dcb0de064f94d87f636e9420e4a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 23f9adbe1e272cb4ba22e1be4cd78341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheck: {fileID: 282173226}
-  groundCheckDistance: 1
-  attackCooldown: 1.5
+  attackCooldown: 3
   lightPoint: {fileID: 1347509536}
   lightballs:
   - {fileID: 1034572527}
@@ -314,8 +308,9 @@ MonoBehaviour:
   - {fileID: 1677635655}
   - {fileID: 2030390042}
   - {fileID: 877396723}
-  detectionRadius: 20
-  maxHealth: 10
+  detectionRadius: 10
+  maxHealth: 3
+  moveSpeed: 1
 --- !u!1 &73356566
 GameObject:
   m_ObjectHideFlags: 0
@@ -7165,7 +7160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dc979fcb5383bc488de977e87a5ace0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: level3
+  nextLevelName: Win
   previousSceneName: level2
 --- !u!1 &1479791960
 GameObject:
@@ -9114,7 +9109,7 @@ Transform:
   m_GameObject: {fileID: 2111169545}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.12, y: -1.85, z: 0.06346237}
+  m_LocalPosition: {x: -6.66, y: 1.08, z: 0.06346237}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_ConstrainProportionsScale: 1
   m_Children:

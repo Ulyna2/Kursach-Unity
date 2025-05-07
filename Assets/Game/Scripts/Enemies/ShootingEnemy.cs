@@ -1,69 +1,60 @@
 using UnityEngine;
 
-
 public class ShootingEnemy : MonoBehaviour, IDamageable
 {
-    [SerializeField] private float attackCooldown;
-    [SerializeField] private Transform lightPoint;
-    [SerializeField] private GameObject[] lightballs;
-   
-    public float detectionRadius = 6f;       // Радиус, в котором враг начинает стрелять
-    //public int health = 3;                   // Кол-во жизней врага
-    public int maxHealth = 3; // Максимальное здоровье
-    private int currentHealth; // Текущее здоровье
+    [SerializeField] protected float attackCooldown;
+    [SerializeField] protected Transform lightPoint;
+    [SerializeField] protected GameObject[] lightballs;
 
+    public float detectionRadius = 6f;
+    public int maxHealth = 3;
+    protected int currentHealth;
 
-    private GameObject player;
-  
-    private float cooldownTimer = Mathf.Infinity;
+    protected GameObject player;
+    protected float cooldownTimer = Mathf.Infinity;
 
-    private void Start()
+    protected virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         currentHealth = maxHealth;
-
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (player == null) return;
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
-        
         if (distance <= detectionRadius && cooldownTimer > attackCooldown)
         {
-            
             Attack();
-            cooldownTimer = 0; // Сброс cooldown после атаки
+            cooldownTimer = 0;
         }
+
         cooldownTimer += Time.deltaTime;
     }
-    private void Attack()
+
+    protected virtual void Attack()
     {
         int lightballIndex = FindLightball();
-        if (lightballIndex != -1) // Проверка на наличие доступного lightball
+        if (lightballIndex != -1)
         {
             lightballs[lightballIndex].transform.position = lightPoint.position;
-            lightballs[lightballIndex].SetActive(true); // Активируем lightball
+            lightballs[lightballIndex].SetActive(true);
             lightballs[lightballIndex].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
         }
-        else
-        {
-            Debug.LogWarning("No available lightballs!");
-        }
     }
-    private int FindLightball()
+
+    protected int FindLightball()
     {
         for (int i = 0; i < lightballs.Length; i++)
         {
             if (!lightballs[i].activeInHierarchy)
                 return i;
         }
-        return -1; // Возвращаем -1, если все lightball активны
+        return -1;
     }
 
-    
-    public void TakeDamage()
+    public virtual void TakeDamage()
     {
         currentHealth--;
         if (currentHealth <= 0)
@@ -72,3 +63,4 @@ public class ShootingEnemy : MonoBehaviour, IDamageable
         }
     }
 }
+

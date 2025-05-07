@@ -4,11 +4,11 @@
 
 // public class LevelManager : MonoBehaviour
 // {
-//     public bool keyCollected = false;
+//     // public bool keyCollected = false;
 //     public int totalEnemies;
 //     private int remainingEnemies;
-//     public Sprite emptyKeySprite;
-//     public Sprite fullKeySprite;
+//     // public Sprite emptyKeySprite;
+//     // public Sprite fullKeySprite;
 //     public Image keyImage;
 
 //     void Start()
@@ -29,12 +29,12 @@
 //     {
 //         return remainingEnemies == 0;
 //     }
-//     public void KeyCollected()
-//     {
-//         keyCollected = true;
-//         Debug.Log("Ключ собран!");
-//         keyImage.sprite = fullKeySprite;
+//     // public void KeyCollected()
+//     // {
+//     //     keyCollected = true;
+//     //     Debug.Log("Ключ собран!");
+//     //     keyImage.sprite = fullKeySprite;
 
 
-//     }
+//     // }
 // }

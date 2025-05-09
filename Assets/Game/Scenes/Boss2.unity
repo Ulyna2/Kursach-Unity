@@ -4559,7 +4559,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1553570626}
         m_TargetAssemblyTypeName: PMenu, Assembly-CSharp
         m_MethodName: OpenPauseMenu
         m_Mode: 1

@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 73313086}
         m_TargetAssemblyTypeName: PMenu, Assembly-CSharp
         m_MethodName: OpenPauseMenu
         m_Mode: 1
@@ -2366,7 +2366,7 @@ Transform:
   m_GameObject: {fileID: 422064373}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.51, y: 1.8840001, z: 0.06346237}
+  m_LocalPosition: {x: 2.88, y: 2.95, z: 0.06346237}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4620,7 +4620,7 @@ Transform:
   m_GameObject: {fileID: 724738731}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.56, y: 1.23, z: 0}
+  m_LocalPosition: {x: -8.14, y: 0.9, z: 0}
   m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -11589,7 +11589,7 @@ Transform:
   m_GameObject: {fileID: 2111169545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.38, y: -2.9375272, z: 0.06346237}
+  m_LocalPosition: {x: 0.78, y: 2.06, z: 0.06346237}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11703,7 +11703,7 @@ Transform:
   m_GameObject: {fileID: 2141984385}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.15, y: 1.86, z: 0.06346237}
+  m_LocalPosition: {x: -4.88, y: 2.65, z: 0.06346237}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_ConstrainProportionsScale: 1
   m_Children:

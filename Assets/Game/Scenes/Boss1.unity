@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad519884b6c424e9c9b0733f27f48bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 1.5
+  attackCooldown: 2
   lightPoint: {fileID: 1347509536}
   lightballs:
   - {fileID: 1034572527}

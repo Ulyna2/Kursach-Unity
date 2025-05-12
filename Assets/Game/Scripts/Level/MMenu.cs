@@ -7,11 +7,15 @@ public class MMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
     public void ExitGame()
     {
         Debug.Log("Игра закрылась");
         Application.Quit();
+    }
+    public void GoToMain()
+    {
+        SceneManager.LoadScene(0);
     }
 }

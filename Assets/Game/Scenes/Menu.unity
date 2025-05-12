@@ -458,7 +458,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 937930866}
         m_TargetAssemblyTypeName: MMenu, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_MethodName: NextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c16ca49a54852492caa529dd23fd8c70, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0138ada9e38cb4b19bb1539158195db8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

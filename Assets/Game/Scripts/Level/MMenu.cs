@@ -7,7 +7,7 @@ public class MMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(7);
     }
     public void ExitGame()
     {
@@ -17,5 +17,10 @@ public class MMenu : MonoBehaviour
     public void GoToMain()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

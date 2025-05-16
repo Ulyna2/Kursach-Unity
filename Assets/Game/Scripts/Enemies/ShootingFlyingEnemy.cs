@@ -6,11 +6,10 @@ public class ShootingFlyingEnemy : ShootingEnemy
 
     protected override void Update()
     {
-        base.Update(); // Вызов логики стрельбы из базового класса
+        base.Update();
 
         if (player == null) return;
 
-        // Движение к игроку
         float distance = Vector2.Distance(transform.position, player.transform.position);
         if (distance > 0.5f)
         {
@@ -18,7 +17,6 @@ public class ShootingFlyingEnemy : ShootingEnemy
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
         }
 
-        // Поворот к игроку
         Vector3 scale = transform.localScale;
         scale.x = Mathf.Abs(scale.x) * (player.transform.position.x > transform.position.x ? 1 : -1);
         transform.localScale = scale;

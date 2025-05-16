@@ -26,6 +26,6 @@ public class PMenu : MonoBehaviour
     public void LoadMainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0); // Убедись, что сцена названа верно
+        SceneManager.LoadScene(0);
     }
 }

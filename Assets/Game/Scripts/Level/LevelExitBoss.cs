@@ -18,7 +18,6 @@ public class LevelExitBoss : MonoBehaviour
     {
         if (player != null && player.currentLives <= 0)
         {
-            Debug.Log("Игрок проиграл. Возврат к предыдущему уровню.");
             SceneManager.LoadScene(previousSceneName);
         }
     }
@@ -28,12 +27,7 @@ public class LevelExitBoss : MonoBehaviour
         {
             if (IsBossDefeated())
             {
-                Debug.Log("Босс побежден. Переход к следующему уровню.");
                 SceneManager.LoadScene(nextLevelName);
-            }
-            else
-            {
-                Debug.Log("Сначала победи босса!");
             }
         }
     }
@@ -41,7 +35,7 @@ public class LevelExitBoss : MonoBehaviour
     private bool IsBossDefeated()
     {
         GameObject boss = GameObject.FindWithTag("Enemy");
-        return boss == null; // если объекта нет — значит он побежден
+        return boss == null;
     }
 }
 

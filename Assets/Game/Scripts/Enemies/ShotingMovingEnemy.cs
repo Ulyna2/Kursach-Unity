@@ -26,7 +26,7 @@ public class ShootingMovingEnemy : MonoBehaviour, IDamageable
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
-        body.gravityScale = 0; // Чтобы не падал
+        body.gravityScale = 0;
     }
 
     private void Start()

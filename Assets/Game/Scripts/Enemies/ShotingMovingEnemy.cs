@@ -84,7 +84,9 @@ public class ShootingMovingEnemy : MonoBehaviour, IDamageable
         {
             lightballs[lightballIndex].transform.position = lightPoint.position;
             lightballs[lightballIndex].SetActive(true);
-            lightballs[lightballIndex].GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+            Projectile projectile = lightballs[lightballIndex].GetComponent<Projectile>();
+            projectile.owner = gameObject;
+            projectile.SetDirection(Mathf.Sign(transform.localScale.x));
         }
     }
 
@@ -101,6 +103,7 @@ public class ShootingMovingEnemy : MonoBehaviour, IDamageable
     public void TakeDamage()
     {
         currentHealth--;
+        Debug.Log("Враг получил урон. Текущее здоровье: " + currentHealth);
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
@@ -109,9 +112,13 @@ public class ShootingMovingEnemy : MonoBehaviour, IDamageable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<Projectile>())
+        Projectile projectile = collision.GetComponent<Projectile>();
+        if (projectile != null)
         {
-            TakeDamage();
+            if (projectile.owner != gameObject)
+            {
+                TakeDamage();
+            }
         }
 
         if (collision.CompareTag("Player"))

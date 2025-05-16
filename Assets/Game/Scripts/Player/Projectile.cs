@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     private BoxCollider2D boxCollider;
     private Animator anim;
     private float lifetime;
+    public GameObject owner;
 
 
     private void Awake()
@@ -29,6 +30,9 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject == owner)
+            return;
+
         if (collision.CompareTag("Player"))
         {
             PlayerMovement player = collision.GetComponent<PlayerMovement>();

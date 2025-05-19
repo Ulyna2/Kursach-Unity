@@ -464,6 +464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &73356573
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -918,6 +919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &313806044
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1214,6 +1216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &415560169
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1589,6 +1592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &466579154
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1783,6 +1787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &507626748
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2120,6 +2125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &528981355
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2444,6 +2450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &572534050
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2874,6 +2881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &631316603
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3489,6 +3497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &876442547
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3683,6 +3692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &877317533
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3877,6 +3887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &877396729
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4071,6 +4082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &1034572533
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4278,6 +4290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &1152441876
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4485,6 +4498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &1175038351
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4692,6 +4706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &1222070848
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5236,6 +5251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &1342073601
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5313,7 +5329,7 @@ Transform:
   m_GameObject: {fileID: 1347509535}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.51, y: -0.7, z: 0}
+  m_LocalPosition: {x: 10.03, y: -0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5660,7 +5676,7 @@ Transform:
   m_GameObject: {fileID: 1620754271}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.8, y: 0, z: 0}
+  m_LocalPosition: {x: 9.76, y: -2.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6070,6 +6086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &1677635661
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6277,6 +6294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &1699115159
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6976,6 +6994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &1907287470
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7302,6 +7321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  owner: {fileID: 0}
 --- !u!212 &2030390048
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7695,10 +7715,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -3.569273, y: -0.16953373}
+  m_Offset: {x: 0.395957, y: -0.036781788}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.31, y: 0.5}
     oldSize: {x: 20.25, y: 16.75}
     newSize: {x: 20.25, y: 16.75}
     adaptiveTilingThreshold: 0.5
@@ -7706,7 +7726,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.291504, y: 15.571377}
+  m_Size: {x: 5.233618, y: 15.305873}
   m_EdgeRadius: 0
 --- !u!212 &2111169548
 SpriteRenderer:
@@ -7769,7 +7789,7 @@ Transform:
   m_GameObject: {fileID: 2111169545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -1.07, z: 0.06346237}
+  m_LocalPosition: {x: -0.335, y: -1.13, z: 0.06346237}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_ConstrainProportionsScale: 1
   m_Children:
